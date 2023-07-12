@@ -125,7 +125,7 @@
         .screen__header {
             margin-bottom: 80px;
             @media (max-width: 1800px) {
-                margin-bottom: calc(24px + (80 - 24) * ((100vw - 320px) / (1800 - 320)));
+                margin-bottom: calc(20px + (80 - 20) * ((100vw - 320px) / (1800 - 320)));
             }
         }
     }

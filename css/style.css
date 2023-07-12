@@ -83,7 +83,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-  height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -155,6 +156,11 @@ body {
 .main-logo {
   max-width: 142px;
 }
+@media (max-width: 1200px) {
+  .main-logo {
+    max-width: calc(120px + 22 * (100vw - 320px) / 880);
+  }
+}
 .main-logo img {
   width: 100%;
 }
@@ -185,7 +191,7 @@ body {
 }
 @media (max-width: 1800px) {
   .article h3, .article h4, .article h5 {
-    font-size: calc(22px + 10 * (100vw - 320px) / 1480);
+    font-size: calc(20px + 12 * (100vw - 320px) / 1480);
   }
 }
 .article ul {
@@ -379,7 +385,7 @@ body {
 }
 @media (max-width: 1800px) {
   .screen_second .screen__header {
-    margin-bottom: calc(24px + 56 * (100vw - 320px) / 1480);
+    margin-bottom: calc(20px + 60 * (100vw - 320px) / 1480);
   }
 }
 .screen__wrapper {

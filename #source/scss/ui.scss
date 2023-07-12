@@ -9,7 +9,8 @@
 }
 
 .wrapper {
-    height: 100vh;
+    max-height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -66,6 +67,9 @@ body {
 
 .main-logo {
     max-width: 142px;
+    @media (max-width: 1200px) {
+        max-width: calc(120px + (142 - 120) * ((100vw - 320px) / (1200 - 320)));
+    }
     img {
         width: 100%;
     }
@@ -75,7 +79,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    //flex: 1 1 auto;
 
     p {
         line-height: 150%;
@@ -86,7 +89,7 @@ body {
     h3, h4, h5 {
         font-size: 32px;
         @media (max-width: 1800px) {
-            font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1800 - 320)));
+            font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1800 - 320)));
         }
         line-height: 170%;
         font-weight: 800;
