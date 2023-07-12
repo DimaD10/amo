@@ -1,12 +1,16 @@
-let marker = true;
-
-document.querySelector('.screen__body').addEventListener('scroll', e => {
-    marker = false
-})
 
 const screenSwiper = new Swiper('.screen-slider', {
     direction: 'vertical',
-    mousewheel: marker,
+    //mousewheel: true,
     simulateTouch: false,
     speed: 500,
+    touchRatio: 0.2,
+    keyboard: {
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    mousewheel: {
+        sensitivity: 0.2,
+        thresholdDelta: 100,
+    },
 });
