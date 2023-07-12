@@ -121,7 +121,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 55px;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -130,18 +129,27 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -webkit-transform: translateX(-36px);
+          transform: translateX(-36px);
 }
 @media (max-width: 1400px) {
   .hero-logo {
-    gap: calc(12px + 43 * (100vw - 320px) / 1080);
+    -webkit-transform: translateX(calc(-12px + -24 * (100vw - 320px) / 1080));
+            transform: translateX(calc(-12px + -24 * (100vw - 320px) / 1080));
   }
 }
 .hero-logo__icon {
-  max-width: 207px;
+  max-width: 472px;
+  margin-right: -73px;
 }
 @media (max-width: 1400px) {
   .hero-logo__icon {
-    max-width: calc(70px + 137 * (100vw - 320px) / 1080);
+    max-width: calc(140px + 332 * (100vw - 320px) / 1080);
+  }
+}
+@media (max-width: 1400px) {
+  .hero-logo__icon {
+    margin-right: calc(-24px + -49 * (100vw - 320px) / 1080);
   }
 }
 .hero-logo__text {
@@ -281,7 +289,7 @@ body {
 }
 .screen_hero {
   padding: 76px 0;
-  background: url("../img/page1/FON1.jpg") no-repeat;
+  background: url("../img/page1/bg.png") no-repeat;
   background-size: cover;
   background-position: center;
 }

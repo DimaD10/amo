@@ -1,10 +1,9 @@
 
 const screenSwiper = new Swiper('.screen-slider', {
     direction: 'vertical',
-    //mousewheel: true,
     simulateTouch: false,
     speed: 500,
-    touchRatio: 0.6,
+    touchRatio: 0.8,
     keyboard: {
         onlyInViewport: true,
         pageUpDown: true,

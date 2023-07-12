@@ -42,19 +42,24 @@ body {
 
 .hero-logo {
     display: flex;
-    gap: 55px;
-    @media (max-width: 1400px) {
-        gap: calc(12px + (55 - 12) * ((100vw - 320px) / (1400 - 320)));
-    }
     height: 100%;
     align-items: center;
     justify-content: center;
     margin: auto;
+    transform: translateX(-36px);
+    @media (max-width: 1400px) {
+        transform: translateX(calc(-12px + (-36 + 12) * ((100vw - 320px) / (1400 - 320))));
+    }
 
     &__icon {
-        max-width: 207px;
+        max-width: 472px;
         @media (max-width: 1400px) {
-            max-width: calc(70px + (207 - 70) * ((100vw - 320px) / (1400 - 320)));
+            max-width: calc(140px + (472 - 140) * ((100vw - 320px) / (1400 - 320)));
+        }
+
+        margin-right: -73px;
+        @media (max-width: 1400px) {
+            margin-right: calc(-24px + (-73 + 24) * ((100vw - 320px) / (1400 - 320)));
         }
     }
     &__text {
