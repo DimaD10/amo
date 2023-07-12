@@ -3,7 +3,7 @@
 @import './ui';
 
 .screen {
-    min-height: 100vh !important;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
 
@@ -23,7 +23,7 @@
         justify-content: space-between;
         align-items: flex-start;
 
-        @media (max-width: 480px) {
+        @media (max-width: 767.98px) {
             flex-direction: column-reverse;
             gap: 12px;
         }
@@ -32,7 +32,7 @@
         margin: 14px 0;
         flex-shrink: 0;
 
-        @media (max-width: 480px) {
+        @media (max-width: 767.98px) {
             margin-left: auto;
             margin-top: 0;
         }
@@ -99,14 +99,27 @@
             flex: 1 1 auto;
             @media (max-width: 1800px) {
                 gap: calc(20px + (75 - 20) * ((100vw - 320px) / (1800 - 320)));
+
+                height: calc(100vh - (300px + (360 - 300) * ((100vw - 1200px) / (1800 - 1200)))); 
             }
             @media (max-width: 1600px) {
                 max-width: 48vw;
             }
             @media (max-width: 1200px) {
                 max-width: none;
+                height: calc(100vh - (140px + (250 - 140) * ((100vw - 320px) / (1200 - 320)))); 
+            }
+            @media (max-width: 767.98px) {
+                height: calc(100vh - (160px + (270 - 160) * ((100vw - 320px) / (767.98 - 320)))); 
+            }
+            @media (max-width: 480px) {
+                height: calc(100vh - (174px + (220 - 174) * ((100vw - 320px) / (480 - 320)))); 
             }
             gap: 75px;
+            height: calc(100vh - 360px);
+            overflow-y: auto;
+
+
         }
 
         .screen__header {
