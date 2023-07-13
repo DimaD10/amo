@@ -199,7 +199,7 @@ body {
 }
 @media (max-width: 1800px) {
   .article h3, .article h4, .article h5 {
-    font-size: calc(20px + 12 * (100vw - 320px) / 1480);
+    font-size: calc(18px + 14 * (100vw - 320px) / 1480);
   }
 }
 .article ul {
@@ -247,12 +247,22 @@ body {
 .screen__title {
   font-size: 110px;
   font-weight: 700;
-  line-height: 130%;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 @media (max-width: 1800px) {
   .screen__title {
-    font-size: calc(28px + 82 * (100vw - 320px) / 1480);
+    font-size: calc(22px + 88 * (100vw - 320px) / 1480);
   }
+}
+.screen__title .purple {
+  color: #B67DFF;
+}
+.screen__title .green {
+  color: #0BF4A8;
+}
+.screen__title span {
+  white-space: nowrap;
 }
 .screen__header {
   display: -webkit-box;
@@ -310,11 +320,11 @@ body {
           flex-direction: column;
   width: 100%;
   padding: 62px 0;
+  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_second {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
-    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_second .screen__decor {
@@ -358,13 +368,13 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   gap: 75px;
-  height: calc(100vh - 360px);
+  height: calc(100vh - 245px);
   overflow-y: auto;
 }
 @media (max-width: 1800px) {
   .screen_second .screen__body {
     gap: calc(20px + 55 * (100vw - 320px) / 1480);
-    height: calc(100vh - (300px + 60 * (100vw - 1200px) / 600));
+    height: calc(100vh - (182px + 63 * (100vw - 1200px) / 600));
   }
 }
 @media (max-width: 1600px) {
@@ -375,25 +385,143 @@ body {
 @media (max-width: 1200px) {
   .screen_second .screen__body {
     max-width: none;
-    height: calc(100vh - (140px + 110 * (100vw - 320px) / 880));
+    height: calc(100vh - (133px + 43 * (100vw - 767.98px) / 432.02));
   }
 }
 @media (max-width: 767.98px) {
   .screen_second .screen__body {
-    height: calc(100vh - (160px + 110 * (100vw - 320px) / 447.98));
+    height: calc(100vh - (146px + 34 * (100vw - 480px) / 287.98));
   }
 }
 @media (max-width: 480px) {
   .screen_second .screen__body {
-    height: calc(100vh - (174px + 46 * (100vw - 320px) / 160));
+    height: calc(100vh - (126px + 20 * (100vw - 320px) / 160));
   }
 }
 .screen_second .screen__header {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 @media (max-width: 1800px) {
   .screen_second .screen__header {
-    margin-bottom: calc(20px + 60 * (100vw - 320px) / 1480);
+    margin-bottom: calc(20px + 50 * (100vw - 320px) / 1480);
+  }
+}
+.screen_second .screen__title {
+  text-transform: none;
+}
+.screen_staking {
+  padding: 62px 0;
+  padding-bottom: 0;
+}
+@media (max-width: 1800px) {
+  .screen_staking {
+    padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+  }
+}
+.screen_staking .screen__body {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: calc(100vh - 332px);
+  overflow-y: auto;
+}
+@media (max-width: 1200px) {
+  .screen_staking .screen__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (max-width: 1800px) {
+  .screen_staking .screen__body {
+    height: calc(100vh - (238px + 94 * (100vw - 1200px) / 600));
+  }
+}
+@media (max-width: 1200px) {
+  .screen_staking .screen__body {
+    gap: 20px;
+    height: calc(100vh - (211px + 27 * (100vw - 1024px) / 176));
+  }
+}
+@media (max-width: 1024px) {
+  .screen_staking .screen__body {
+    height: calc(100vh - (234px + 40 * (100vw - 767.98px) / 256.02));
+  }
+}
+@media (max-width: 767.98px) {
+  .screen_staking .screen__body {
+    height: calc(100vh - (141px + 79 * (100vw - 320px) / 447.98));
+  }
+}
+@media (max-width: 480px) {
+  .screen_staking .screen__body {
+    height: calc(100vh - (144px + 26 * (100vw - 320px) / 160));
+  }
+}
+.screen_staking .screen__header {
+  margin-bottom: 50px;
+}
+@media (max-width: 1800px) {
+  .screen_staking .screen__header {
+    margin-bottom: calc(20px + 30 * (100vw - 320px) / 1480);
+  }
+}
+@media (max-width: 1024px) {
+  .screen_staking .screen__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 8px;
+  }
+  .screen_staking .screen__header .main-logo {
+    margin-left: auto;
+  }
+}
+.screen_staking .screen__body-part:nth-child(1) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55%;
+          flex: 0 0 55%;
+}
+.screen_staking .screen__body-part:nth-child(2) {
+  padding-left: 80px;
+  padding-bottom: 20px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 1800px) {
+  .screen_staking .screen__body-part:nth-child(2) {
+    padding-left: calc(30px + 50 * (100vw - 1200px) / 600);
+  }
+}
+@media (max-width: 1200px) {
+  .screen_staking .screen__body-part:nth-child(2) {
+    padding-left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (max-width: 480px) {
+  .screen_staking .screen__body-part:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .screen__wrapper {
@@ -435,4 +563,35 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: auto;
+}
+.screen__body-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.screen__body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+@media (max-width: 1200px) {
+  .screen__body::-webkit-scrollbar {
+    width: calc(6px + 4 * (100vw - 320px) / 880);
+  }
+}
+.screen__body::-webkit-scrollbar-thumb {
+  background: #B67DFF;
+  border-radius: 2px;
+}
+
+.staking__preview {
+  width: 100%;
+  max-width: 670px;
+}
+.staking__preview img {
+  width: 100%;
 }
