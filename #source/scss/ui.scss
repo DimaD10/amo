@@ -24,6 +24,21 @@ body {
     @media (max-width: 1800px) {
         font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1800 - 320)));
     }
+
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+        @media (max-width: 1200px)  {
+            width: calc(6px + (10 - 6) * ((100vw - 320px) / (1200 - 320)));
+        }
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #B67DFF;
+        border-radius: 2px;
+
+    }
 }
 
 

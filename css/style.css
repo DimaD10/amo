@@ -101,6 +101,20 @@ body {
     font-size: calc(18px + 10 * (100vw - 320px) / 1480);
   }
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+@media (max-width: 1200px) {
+  body::-webkit-scrollbar {
+    width: calc(6px + 4 * (100vw - 320px) / 880);
+  }
+}
+body::-webkit-scrollbar-thumb {
+  background: #B67DFF;
+  border-radius: 2px;
+}
 
 .copyright {
   font-size: 20px;
