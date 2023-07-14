@@ -85,8 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-  max-height: 100vh;
-  height: 100%;
+  min-height: 100%;
   overflow: hidden;
 }
 
@@ -240,7 +239,7 @@ body {
 }
 
 .screen {
-  height: 100%;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -333,12 +332,50 @@ body {
   background: url("../img/page1/bg.png") no-repeat;
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (max-width: 1200px) {
   .screen_hero {
     padding-top: calc(24px + 52 * (100vw - 320px) / 880);
     padding-bottom: calc(24px + 52 * (100vw - 320px) / 880);
   }
+}
+.screen_hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.screen_hero .screen__wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.screen_hero .hero-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0;
+  height: auto;
 }
 .screen_second {
   position: relative;
@@ -351,11 +388,11 @@ body {
           flex-direction: column;
   width: 100%;
   padding: 62px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_second {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_second .screen__decor {
@@ -442,11 +479,11 @@ body {
 }
 .screen_staking {
   padding: 62px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_staking {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_staking .screen__body {
@@ -557,11 +594,11 @@ body {
 }
 .screen_benefits {
   padding: 62px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_benefits {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_benefits .screen__body {
@@ -677,11 +714,11 @@ body {
 }
 .screen_map {
   padding: 62px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_map {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_map .article p {
@@ -813,12 +850,12 @@ body {
 }
 .screen_projects {
   padding: 62px 0;
-  padding-bottom: 0;
   position: relative;
 }
 @media (max-width: 1800px) {
   .screen_projects {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_projects .article {
@@ -936,12 +973,12 @@ body {
 }
 .screen_points {
   padding: 62px 0;
-  padding-bottom: 0;
   position: relative;
 }
 @media (max-width: 1800px) {
   .screen_points {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 @media (max-width: 767.98px) {
@@ -1065,11 +1102,11 @@ body {
 }
 .screen_artists {
   padding: 62px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1800px) {
   .screen_artists {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_artists .article p {
@@ -1179,19 +1216,26 @@ body {
 }
 .screen_mission {
   padding: 62px 0;
-  padding-bottom: 0;
-  background: url("../img/page9/bg.png");
-  background-size: cover;
+  background: url("../img/page9/bg.png") no-repeat;
+  background-size: 100%;
   background-position: center;
-}
-@media (max-width: 767.98px) {
-  .screen_mission {
-    background: none;
-  }
+  background-position-y: -160px;
+  position: relative;
 }
 @media (max-width: 1800px) {
   .screen_mission {
     padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
+  }
+}
+@media (max-width: 1800px) {
+  .screen_mission {
+    background-position-y: calc(-20px + -140 * (100vw - 767.98px) / 1032.02) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .screen_mission {
+    background: none;
   }
 }
 .screen_mission .decor {
@@ -1291,10 +1335,46 @@ body {
 }
 .screen_end {
   padding: 62px 0;
-  padding-bottom: 0;
   background: url("../img/page10/bg.png") no-repeat;
   background-size: 100%;
   background-position: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 1800px) {
+  .screen_end {
+    padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
+    padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
+  }
+}
+.screen_end .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.screen_end .screen__wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (max-width: 767.98px) {
   .screen_end {
@@ -1304,11 +1384,6 @@ body {
 @media (max-width: 480px) {
   .screen_end {
     background-size: 150%;
-  }
-}
-@media (max-width: 1800px) {
-  .screen_end {
-    padding-top: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
 .screen_end .article {
@@ -1339,6 +1414,9 @@ body {
           justify-content: flex-start;
   padding-bottom: 20px;
   height: calc(100vh - 122px);
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 auto !important;
+          flex: 1 1 auto !important;
   overflow-y: auto;
 }
 @media (max-width: 1200px) {
@@ -1409,6 +1487,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: auto;
+  height: auto !important;
 }
 .screen__body-part {
   display: -webkit-box;
