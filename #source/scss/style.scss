@@ -769,6 +769,73 @@
             }
         }
     }
+    &_end {
+        padding: 62px 0;
+        padding-bottom: 0;
+        background: url('../img/page10/bg.png') no-repeat;
+        background-size: 100%;
+        background-position: right;
+
+        @media (max-width: 767.98px) {
+            background-size: 130%;
+        }
+        @media (max-width: 480px) {
+            background-size: 150%;
+        }
+
+        @media (max-width: 1800px) {
+            padding-top: calc(30px + (62 - 30) * ((100vw - 320px) / (1800 - 320)));
+        }
+
+        .article {
+            margin: auto 0;
+
+            @media (max-width: 767.98px) {
+                &:first-child {
+                    margin-bottom: 0;
+                }
+                &:last-child {
+                    margin-top: 90px;
+                }
+            }
+        }
+
+        .screen__title {
+            margin-bottom: 22px;
+            @media (max-width: 1800px) {
+                font-size: calc(32px + (110 - 32) * ((100vw - 320px) / (1800 - 320))) !important;
+            }
+        }
+
+        .screen__body {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-bottom: 20px;
+
+            @media (max-width: 1200px) {
+                flex-direction: column;
+            }
+
+            height: calc(100vh - 122px);
+            
+            @media (max-width: 1800px) {
+                height: calc(100vh - (111px + (122 - 111) * ((100vw - 1200px) / (1800 - 1200)))); 
+            }
+            @media (max-width: 1200px) {
+                height: calc(100vh - (96px + (111 - 96) * ((100vw - 767.98px) / (1200 - 767.98)))); 
+            }
+            @media (max-width: 767.98px) {
+                height: calc(100vh - (71px + (82 - 71) * ((100vw - 320px) / (767.98 - 320)))); 
+            }
+            overflow-y: auto;
+        }
+        .screen__header {
+            width: 100%;
+            .main-logo {
+                margin-left: auto;
+            }
+        }
+    }
 
     &__wrapper {
         flex: 1 1 auto;
