@@ -1377,6 +1377,11 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: calc(30px + 32 * (100vw - 320px) / 1480);
   }
 }
+@media (max-width: 1200px) {
+  .screen_end {
+    min-height: 100vh !important;
+  }
+}
 .screen_end .container {
   display: -webkit-box;
   display: -ms-flexbox;

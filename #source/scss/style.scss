@@ -820,6 +820,10 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 1200px) {
+            min-height: 100vh !important
+        }
+
         .container {
             display: flex;
             flex-direction: column;
