@@ -4,6 +4,10 @@
 
 .screen {
     min-height: 100vh;
+    @media (max-width: 1200px) {
+        min-height: 0 !important;
+        height: auto;
+    }
     width: 100vw;
     overflow: hidden;
 
@@ -87,6 +91,10 @@
 
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 1200px) {
+            min-height: 100vh !important
+        }
 
         .container {
             display: flex;
